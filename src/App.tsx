@@ -1,20 +1,17 @@
-import { Route, Routes } from "react-router-dom";
-import "./App.css";
-import HomePage from "./Pages/HomePage/HomePage";
+// src/App.tsx
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Register from "./Components/Register";
+import Login from "./Components/Login";
+import Home from "./Components/Home/Home";
 
-import ProjectManager from "./Pages/ProjectManagerPage/ProjectManagerPage";
-import AddProject from "./Components/Addproject/Addproject";
-
-function App() {
+export default function App() {
   return (
-    <>
+    <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/allprojects" element={<ProjectManager />} />
-        <Route path="/addproject" element={<AddProject />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
-    </>
+    </Router>
   );
 }
-
-export default App;
