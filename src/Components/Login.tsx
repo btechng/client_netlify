@@ -20,7 +20,7 @@ export default function Login() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      // 👇 Add type here
+      // 👇 Add type heree
       const res = await API.post<LoginResponse>("/auth/login", {
         email,
         password,
